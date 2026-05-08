@@ -266,4 +266,4 @@ initNavigation();
 initReveal();
 initModules();
 initVideo();
-loadVideoFromEnv();
+loadVideo();
