@@ -1,120 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>A.F.P.S</title>
-
-  <link rel="stylesheet" href="style.css"/>
-
-  <!-- AOS animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A.F.P.S is an Automated Flood Prevention System built for Codeavour Track 1: Clean Planet, Healthy People.">
+  <title>A.F.P.S | Automated Flood Prevention System</title>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preconnect" href="https://img.youtube.com">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- HERO -->
-<section class="hero">
+  <header class="site-header" data-header>
+    <a class="brand" href="#home" aria-label="A.F.P.S home">
+      <span class="brand-mark">AF</span>
+      <span class="brand-text">A.F.P.S</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" aria-label="Primary navigation" data-nav>
+      <a href="#system">System</a>
+      <a href="#features">Features</a>
+      <a href="#impact">Impact</a>
+      <a href="#team">Team</a>
+      <a href="#video">Video</a>
+    </nav>
+  </header>
 
-  <div class="hero-bg"></div>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-grid shell">
+        <div class="hero-copy reveal">
+          <h1 id="hero-title">Automated Flood Prevention System</h1>
+          <p class="hero-lede">Detect. Divert. Defend.</p>
+          <p class="hero-text">
+            A proactive flood mitigation project using water-level sensing, automated barriers,
+            debris collection, and live IoT monitoring to protect communities before flood damage escalates.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#system">
+              Explore system
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h12"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg>
+            </a>
+            <a class="button secondary" href="#video">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
+              Watch pitch
+            </a>
+          </div>
+        </div>
 
-  <div class="hero-content">
-    <h1>A.F.P.S</h1>
-    <p>Automated Flood Prevention System</p>
-    <a href="#overview" class="btn">Explore ↓</a>
-  </div>
+        <aside class="hero-panel reveal" aria-label="Live system concept panel">
+          <div class="panel-topline">
+            <span>System overview</span>
+            <span class="status-dot">Operational</span>
+          </div>
+          <div class="river-map" aria-hidden="true">
+            <img src="assets/project overview/prevention.jpeg" alt="">
+            <span class="river-line"></span>
+            <span class="node node-a"></span>
+            <span class="node node-b"></span>
+            <span class="node node-c"></span>
+          </div>
+          <div class="metric-grid">
+            <div>
+              <span>Water level</span>
+              <strong>61.81 cm</strong>
+            </div>
+            <div>
+              <span>Response mode</span>
+              <strong>Auto</strong>
+            </div>
+            <div>
+              <span>Trash level</span>
+              <strong>Active</strong>
+            </div>
+            <div>
+              <span>Alert state</span>
+              <strong>Ready</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-</section>
-<!-- NAV -->
-<nav>
-  <a href="#team">Team</a>
-  <a href="#overview">Overview</a>
-  <a href="#features">Features</a>
-  <a href="#sdg">SDG</a>
-  <a href="#demo">Demo</a>
-</nav>
+    <section class="mission-strip" aria-label="Competition alignment">
+      <div class="shell mission-grid">
+        <div>
+          <span class="section-code">Codeavour Track 1</span>
+          <strong>Clean Planet, Healthy People</strong>
+        </div>
+        <p>
+          AFPS connects environmental health, climate resilience, and practical student-built robotics
+          into one demonstrable flood-prevention prototype.
+        </p>
+        <a href="#readiness" class="text-link">
+          Rulebook readiness
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h12"></path>
+            <path d="m13 6 6 6-6 6"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
 
-<!-- TEAM -->
-<section id="team" class="section">
-  <h2 data-aos="fade-up">Meet the Team</h2>
+    <section class="section system-section" id="system" aria-labelledby="system-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <span class="section-code">Project overview</span>
+          <h2 id="system-title">From rising water to automated response</h2>
+          <p>
+            The prototype combines four linked modules: sensing, mechanical protection,
+            debris removal, and remote visibility.
+          </p>
+        </div>
 
-  <div class="grid">
-    <div class="card" onclick="openModal('team1')">
-      Member 1
+        <div class="system-layout">
+          <div class="module-list reveal" role="tablist" aria-label="AFPS modules">
+            <button class="module-item active" type="button" role="tab" aria-selected="true" data-module="detection">
+              <span class="module-index">1</span>
+              <span>
+                <strong>Flood Detection</strong>
+                <small>Continuous water-level monitoring</small>
+              </span>
+            </button>
+            <button class="module-item" type="button" role="tab" aria-selected="false" data-module="barrier">
+              <span class="module-index">2</span>
+              <span>
+                <strong>Barrier System</strong>
+                <small>Automatic physical mitigation</small>
+              </span>
+            </button>
+            <button class="module-item" type="button" role="tab" aria-selected="false" data-module="debris">
+              <span class="module-index">3</span>
+              <span>
+                <strong>Debris Collection</strong>
+                <small>Floating waste interception</small>
+              </span>
+            </button>
+            <button class="module-item" type="button" role="tab" aria-selected="false" data-module="dashboard">
+              <span class="module-index">4</span>
+              <span>
+                <strong>IoT Dashboard</strong>
+                <small>Remote status and decision support</small>
+              </span>
+            </button>
+          </div>
+
+          <article class="module-display reveal" aria-live="polite">
+            <div class="module-image-frame">
+              <img id="module-image" src="assets/project overview/flood detector.png" alt="AFPS flood detector prototype with water-level electronics">
+            </div>
+            <div class="module-copy">
+              <span id="module-state" class="module-state">Active</span>
+              <h3 id="module-title">Flood Detection</h3>
+              <p id="module-description">
+                Monitors water levels continuously for early flood warnings and faster emergency response.
+              </p>
+              <dl class="module-specs" id="module-specs">
+                <div><dt>Signal</dt><dd>Water level</dd></div>
+                <div><dt>Output</dt><dd>Early warning</dd></div>
+                <div><dt>Role</dt><dd>Preparedness</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features-section" id="features" aria-labelledby="features-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <span class="section-code">Key features</span>
+          <h2 id="features-title">Designed as one connected protection loop</h2>
+          <p>
+            Each feature reduces a different part of the flood-risk chain: warning time,
+            water impact, operational visibility, and environmental cleanup.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3v18"></path><path d="M5 8h14"></path><path d="M7 16h10"></path></svg>
+            </div>
+            <h3>Flood Detection</h3>
+            <p>Monitors water levels continuously for early flood warnings and stronger emergency preparedness.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 18h16"></path><path d="M7 18V8"></path><path d="M17 18V8"></path><path d="M7 10h10"></path><path d="M7 14h10"></path></svg>
+            </div>
+            <h3>Barrier System</h3>
+            <p>Deploys a mechanical barrier to reduce flood impact on infrastructure, property, and nearby communities.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 16c2 2 4 2 6 0s4-2 6 0 4 2 6 0"></path><path d="M7 11h10"></path><path d="M9 7h6"></path><path d="M10 7l-1 9"></path><path d="M14 7l1 9"></path></svg>
+            </div>
+            <h3>Debris Collection</h3>
+            <p>Collects floating waste before it blocks drainage paths or reaches larger bodies of water.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 5h16v12H4z"></path><path d="M8 21h8"></path><path d="M12 17v4"></path><path d="M8 13v-3"></path><path d="M12 13V8"></path><path d="M16 13v-2"></path></svg>
+            </div>
+            <h3>IoT Dashboard</h3>
+            <p>Displays live system and environmental data so remote monitoring becomes faster and more defensible.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section prototype-section" aria-labelledby="prototype-title">
+      <div class="shell prototype-grid">
+        <div class="prototype-copy reveal">
+          <span class="section-code">Prototype anatomy</span>
+          <h2 id="prototype-title">Hardware evidence, not just an idea</h2>
+          <p>
+            The available project assets show physical builds for the sensor unit, prevention barrier,
+            debris collector, and dashboard. The website foregrounds those real artifacts because judges
+            need to understand what was actually built.
+          </p>
+        </div>
+        <div class="prototype-gallery reveal" aria-label="AFPS prototype images">
+          <figure>
+            <img src="assets/project overview/prevention.jpeg" alt="AFPS automated flood prevention barrier prototype">
+            <figcaption>Barrier prototype</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/project overview/debris collector.png" alt="AFPS debris collector prototype">
+            <figcaption>Debris collector</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/project overview/iot dashboard.png" alt="AFPS IoT dashboard screenshot">
+            <figcaption>IoT dashboard</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section impact-section" id="impact" aria-labelledby="impact-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <span class="section-code">SDG impact</span>
+          <h2 id="impact-title">Built for resilient communities and cleaner waterways</h2>
+          <p>
+            AFPS aligns strongest with clean water, resilient cities, climate action,
+            life below water, and life on land.
+          </p>
+        </div>
+
+        <div class="sdg-grid">
+          <article class="sdg-card reveal">
+            <img src="assets/sdg icons/sdg 6.png" alt="SDG 6 icon">
+            <h3>SDG 6</h3>
+            <p>Improves water quality by collecting floating debris and waste.</p>
+          </article>
+          <article class="sdg-card reveal">
+            <img src="assets/sdg icons/sdg 11.png" alt="SDG 11 icon">
+            <h3>SDG 11</h3>
+            <p>Reduces flood damage and improves urban resilience.</p>
+          </article>
+          <article class="sdg-card reveal">
+            <img src="assets/sdg icons/sdg 13.png" alt="SDG 13 icon">
+            <h3>SDG 13</h3>
+            <p>Addresses flood risks through early warning, automated response, and proactive prevention.</p>
+          </article>
+          <article class="sdg-card reveal">
+            <img src="assets/sdg icons/sdg 14.png" alt="SDG 14 icon">
+            <h3>SDG 14</h3>
+            <p>Prevents waste from entering rivers, drains, and larger bodies of water.</p>
+          </article>
+          <article class="sdg-card reveal">
+            <img src="assets/sdg icons/sdg 15.png" alt="SDG 15 icon">
+            <h3>SDG 15</h3>
+            <p>Protects terrestrial ecosystems, vegetation, and riverside biodiversity.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team-video-section">
+      <div class="shell split-layout">
+        <section id="team" class="team-panel reveal" aria-labelledby="team-title">
+          <span class="section-code">Team</span>
+          <h2 id="team-title">Builders behind AFPS</h2>
+          <div class="team-grid">
+            <article class="team-card">
+              <img src="assets/team photo/programmer.jpeg" alt="Chong Hong Shen">
+              <h3>Chong Hong Shen</h3>
+              <p>Lead Programmer - IoT &amp; System Design</p>
+            </article>
+            <article class="team-card">
+              <img src="assets/team photo/researcher.jpeg" alt="Loh Ying Yee">
+              <h3>Loh Ying Yee</h3>
+              <p>Head Researcher - Data Collection &amp; Management</p>
+            </article>
+            <article class="team-card">
+              <img src="assets/team photo/architech.jpeg" alt="Jovern Ooi Jing Hern">
+              <h3>Jovern Ooi Jing Hern</h3>
+              <p>Chief Architect - Hardware Integration</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="video" class="video-panel reveal" aria-labelledby="video-title">
+          <div class="video-heading">
+            <span class="section-code">Pitch video</span>
+            <h2 id="video-title">Pitch video preview</h2>
+          </div>
+          <div class="video-preview" data-video-preview>
+            <div class="video-placeholder">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
+              <p>Loading video configuration...</p>
+            </div>
+          </div>
+          <div class="video-actions">
+            <button class="button primary" type="button" data-play-video disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
+              Play preview
+            </button>
+            <a class="button secondary disabled" href="#" target="_blank" rel="noreferrer" data-open-video aria-disabled="true">
+              Open YouTube
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7"></path>
+                <path d="M8 7h9v9"></path>
+              </svg>
+            </a>
+          </div>
+          <p class="env-status" data-env-status role="status">
+            Set <code>YOUTUBE_URL</code> in <code>.env</code> to show your project pitch preview.
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <section class="section readiness-section" id="readiness" aria-labelledby="readiness-title">
+      <div class="shell readiness-layout">
+        <div class="readiness-copy reveal">
+          <span class="section-code">Rulebook readiness</span>
+          <h2 id="readiness-title">Built around the judging surfaces that matter</h2>
+          <p>
+            The Codeavour Track 1 rulebook names the website, YouTube pitch, theme explanation,
+            working demonstration, team introduction, and project portfolio as evaluation material.
+            This page is structured to make those surfaces easy to show in order.
+          </p>
+        </div>
+        <ol class="readiness-list reveal">
+          <li><span>01</span><strong>Theme</strong><p>Clean Planet, Healthy People is visible immediately.</p></li>
+          <li><span>02</span><strong>Innovation</strong><p>The prototype modules are explained with real project images.</p></li>
+          <li><span>03</span><strong>Team</strong><p>Names and roles are presented without placeholder content.</p></li>
+          <li><span>04</span><strong>Pitch video</strong><p>The YouTube link is controlled by the ENV file and rendered as a preview.</p></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <strong>A.F.P.S</strong>
+        <p>Automated Flood Prevention System</p>
+      </div>
+      <a href="#home" class="text-link">
+        Back to top
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 19V5"></path>
+          <path d="m6 11 6-6 6 6"></path>
+        </svg>
+      </a>
     </div>
-    <div class="card" onclick="openModal('team2')">
-      Member 2
-    </div>
-    <div class="card" onclick="openModal('team3')">
-      Member 3
-    </div>
-  </div>
-</section>
+  </footer>
 
-<!-- OVERVIEW -->
-<section id="overview" class="section">
-  <h2 data-aos="fade-up">Project Overview</h2>
-
-  <div class="timeline">
-    <div data-aos="fade-right">Detection System</div>
-    <div data-aos="fade-right">Prevention System</div>
-    <div data-aos="fade-right">Debris Collection</div>
-    <div data-aos="fade-right">IoT Alert System</div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section id="features" class="section">
-  <h2 data-aos="fade-up">Key Features</h2>
-
-  <div class="grid">
-    <div class="card" onclick="openModal('f1')">Flood Detection</div>
-    <div class="card" onclick="openModal('f2')">Barrier System</div>
-    <div class="card" onclick="openModal('f3')">IoT Dashboard</div>
-  </div>
-
-  <a class="btn" href="https://your-iot-link.com" target="_blank">
-    View IoT Dashboard
-  </a>
-</section>
-
-<!-- SDG -->
-<section id="sdg" class="section">
-  <h2 data-aos="fade-up">SDG Impact</h2>
-
-  <div class="grid">
-    <div class="card" onclick="openModal('sdg6')">SDG 6</div>
-    <div class="card" onclick="openModal('sdg11')">SDG 11</div>
-    <div class="card" onclick="openModal('sdg13')">SDG 13</div>
-    <div class="card" onclick="openModal('sdg14')">SDG 14</div>
-    <div class="card" onclick="openModal('sdg15')">SDG 15</div>
-  </div>
-</section>
-
-<!-- DEMO -->
-<section id="demo" class="section">
-  <h2 data-aos="fade-up">Demo Video</h2>
-
-  <div class="video-box" onclick="openModal('video')">
-    ▶ Play Demo
-  </div>
-</section>
-
-<!-- MODAL -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span onclick="closeModal()" class="close">&times;</span>
-    <div id="modal-text"></div>
-  </div>
-</div>
-
-<script src="script.js"></script>
-
-<!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
