@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0b1b2b;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* GIF layer */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  background: url("assets/flood.gif") center/cover no-repeat;
+  filter: brightness(0.4); /* darkens gif so text is readable */
+  z-index: 0;
+}
+
+/* text layer */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 70px;
+  margin: 0;
+}
+
+.hero p {
+  opacity: 0.8;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #1f6fff;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  background: #081522;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #13293d;
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #1c3b5a;
+}
+
+/* TIMELINE */
+.timeline div {
+  margin: 10px;
+  padding: 10px;
+  background: #13293d;
+  border-radius: 8px;
+}
+
+/* VIDEO */
+.video-box {
+  background: #1f6fff;
+  padding: 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: #0f2235;
+  margin: 10% auto;
+  padding: 20px;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
+

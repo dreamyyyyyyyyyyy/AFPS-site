@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A.F.P.S</title>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- AOS animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+    <h1>A.F.P.S</h1>
+    <p>Automated Flood Prevention System</p>
+    <a href="#overview" class="btn">Explore ↓</a>
+  </div>
+
+</section>
+<!-- NAV -->
+<nav>
+  <a href="#team">Team</a>
+  <a href="#overview">Overview</a>
+  <a href="#features">Features</a>
+  <a href="#sdg">SDG</a>
+  <a href="#demo">Demo</a>
+</nav>
+
+<!-- TEAM -->
+<section id="team" class="section">
+  <h2 data-aos="fade-up">Meet the Team</h2>
+
+  <div class="grid">
+    <div class="card" onclick="openModal('team1')">
+      Member 1
+    </div>
+    <div class="card" onclick="openModal('team2')">
+      Member 2
+    </div>
+    <div class="card" onclick="openModal('team3')">
+      Member 3
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section id="overview" class="section">
+  <h2 data-aos="fade-up">Project Overview</h2>
+
+  <div class="timeline">
+    <div data-aos="fade-right">Detection System</div>
+    <div data-aos="fade-right">Prevention System</div>
+    <div data-aos="fade-right">Debris Collection</div>
+    <div data-aos="fade-right">IoT Alert System</div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="section">
+  <h2 data-aos="fade-up">Key Features</h2>
+
+  <div class="grid">
+    <div class="card" onclick="openModal('f1')">Flood Detection</div>
+    <div class="card" onclick="openModal('f2')">Barrier System</div>
+    <div class="card" onclick="openModal('f3')">IoT Dashboard</div>
+  </div>
+
+  <a class="btn" href="https://your-iot-link.com" target="_blank">
+    View IoT Dashboard
+  </a>
+</section>
+
+<!-- SDG -->
+<section id="sdg" class="section">
+  <h2 data-aos="fade-up">SDG Impact</h2>
+
+  <div class="grid">
+    <div class="card" onclick="openModal('sdg6')">SDG 6</div>
+    <div class="card" onclick="openModal('sdg11')">SDG 11</div>
+    <div class="card" onclick="openModal('sdg13')">SDG 13</div>
+    <div class="card" onclick="openModal('sdg14')">SDG 14</div>
+    <div class="card" onclick="openModal('sdg15')">SDG 15</div>
+  </div>
+</section>
+
+<!-- DEMO -->
+<section id="demo" class="section">
+  <h2 data-aos="fade-up">Demo Video</h2>
+
+  <div class="video-box" onclick="openModal('video')">
+    ▶ Play Demo
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()" class="close">&times;</span>
+    <div id="modal-text"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
