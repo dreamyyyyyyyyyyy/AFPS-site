@@ -1,0 +1,11 @@
+Flood Detection
+Monitors water levels continuously for early flood warnings.
+Improves emergency preparedness and response time.
+
+Barrier System
+Automatically deploys barriers to reduce flood impact.
+Protects infrastructure, property, and nearby communities.
+
+IoT Dashboard
+Displays real-time system and environmental data.
+Enables remote monitoring and faster decision-making.
