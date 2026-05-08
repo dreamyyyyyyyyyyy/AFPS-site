@@ -32,7 +32,7 @@ const modules = {
     specs: [
       ["Target", "Floating waste"],
       ["Output", "Collected debris"],
-      ["Role", "Waterway cleanup"]
+      ["Role", "Remote checking"]
     ]
   },
   dashboard: {
