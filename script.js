@@ -236,33 +236,17 @@ function setVideoEnabled(videoUrl, videoId) {
   envStatus.innerHTML = `Video configured from <code>.env</code>. Use a public or unlisted YouTube link for competition submission.`;
 }
 
-async function loadVideoFromEnv() {
-  try {
-    const response = await fetch(".env", { cache: "no-store" });
-    if (!response.ok) {
-      setVideoDisabled("No .env file found on this server.");
-      return;
-    }
-    const env = parseEnv(await response.text());
-    const videoUrl = env.YOUTUBE_URL || env.VITE_YOUTUBE_URL || env.NEXT_PUBLIC_YOUTUBE_URL || "";
-    const videoId = getYouTubeId(videoUrl);
+function loadVideo() {
+  const videoUrl = "https://youtu.be/UbsFVgmf1SY";
+  const videoId = getYouTubeId(videoUrl);
 
-    if (!videoUrl) {
-      setVideoDisabled("YOUTUBE_URL is empty.");
-      return;
-    }
-
-    if (!videoId) {
-      setVideoDisabled("YOUTUBE_URL is not a valid YouTube link.");
-      return;
-    }
-
-    setVideoEnabled(videoUrl, videoId);
-  } catch {
-    setVideoDisabled("Run the website through a local server so JavaScript can read .env.");
+  if (!videoId) {
+    setVideoDisabled("Invalid YouTube link.");
+    return;
   }
-}
 
+  setVideoEnabled(videoUrl, videoId);
+}
 function initVideo() {
   playVideoButton.addEventListener("click", () => {
     if (!activeVideo) return;
