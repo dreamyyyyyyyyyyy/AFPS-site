@@ -63,7 +63,6 @@ const revealItems = Array.from(document.querySelectorAll(".reveal"));
 const videoPreview = document.querySelector("[data-video-preview]");
 const playVideoButton = document.querySelector("[data-play-video]");
 const openVideoLink = document.querySelector("[data-open-video]");
-const envStatus = document.querySelector("[data-env-status]");
 
 let activeVideo = null;
 
@@ -209,7 +208,6 @@ function setVideoDisabled(message) {
       <p>${message}</p>
     </div>
   `;
-  envStatus.innerHTML = `Set <code>YOUTUBE_URL</code> in <code>.env</code> to show your project pitch preview.`;
 }
 
 function setVideoEnabled(videoUrl, videoId) {
@@ -233,7 +231,6 @@ function setVideoEnabled(videoUrl, videoId) {
   openVideoLink.href = videoUrl;
   openVideoLink.classList.remove("disabled");
   openVideoLink.setAttribute("aria-disabled", "false");
-  envStatus.innerHTML = `Video configured from <code>.env</code>. Use a public or unlisted YouTube link for competition submission.`;
 }
 
 function loadVideo() {
